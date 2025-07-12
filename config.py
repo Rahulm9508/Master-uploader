@@ -1,5 +1,7 @@
 import os
+from dotenv import load_dotenv
 
+load_dotenv()
 class Config(object):
     BOT_TOKEN = os.environ.get("BOT_TOKEN")  # Ensure correct key name
     API_ID = int(os.environ.get("API_ID"))  # Added key name and default value
