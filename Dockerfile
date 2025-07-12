@@ -10,7 +10,7 @@ RUN apt-get update && \
     cmake \
     && rm -rf /var/lib/apt/lists/*
 RUN pip install --no-cache-dir --upgrade pip && \
-    pip install --no-cache-dir -r master.txt
+    pip install --no-cache-dir -r requirements.txt
 RUN wget -O Bento4-SDK.zip https://github.com/axiomatic-systems/Bento4/archive/refs/heads/master.zip && \
     unzip Bento4-SDK.zip && \
     cd Bento4-master && \
