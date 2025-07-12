@@ -29,7 +29,7 @@ if __name__ == "__main__":
         LOGGER.info(f"<--- @{bot_info.username} Started --->")
         for user_id in Config.AUTH_USERS:
             try:
-                await bot.send_message(chat_id=user_id, text=f"__Congrats! You Are DRM member ... if You get any error then contact me -  {Config.CREDIT}__ ")
+                await bot.send_message(chat_id=user_id, text=f"Congrats! You Are DRM Member....\n__if You get any error then contact me -  {Config.CREDIT}__")
             except Exception as e:
                 LOGGER.error(f"Failed to send message to user {user_id}: {e}")
                 continue
