@@ -61,7 +61,7 @@ async def account_login(bot, m):
         thumb = input6.text
         await input6.delete(True)
         
-        await editable.edit("__Please Provide Channel id to Upload video otherwise `/d` __\n\n__And make me admin in this channel then i can able to Upload otherwise i can't__")
+        await editable.edit("__Please Provide Channel id to Upload video otherwise `/d` __\n\n__And make me admin in this channel then I can able to Upload otherwise I can't__")
         input7 = await bot.listen(chat_id=m.chat.id, filters=filters.text & filters.user(m.from_user.id))
         if "/d" in input7.text:
             channel_id = m.chat.id
@@ -70,9 +70,9 @@ async def account_login(bot, m):
 
         await input7.delete()
         try:
-            await bot.send_message(chat_id=channel_id, text=f'🎯**Target Batch - {b_name}**')
+            await bot.send_message(chat_id=channel_id, text=f'🎯<blockquote>**Target Batch - {b_name}**</blockquote>')
         except Exception as e:
-            await m.reply_text(f"**Please remake a admin in channel..**\n\n**Bot Made By** 🔰『{Credit}🔰")
+            await m.reply_text(f"**Please remake a admin in channel..**\n\n**Bot Made By** 🔰『 {Credit} 』🔰")
             channel_id = m.chat.id
         await editable.delete()
         await masterdl.process_links(links, raw_text, raw_text2, token, b_name, MR, channel_id, bot, m, path, thumb, Credit)
